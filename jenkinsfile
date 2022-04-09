@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('SCM') {
+            steps {
+                git 'https://github.com/Vijayshankarhm35/practiceapp-1.git'
+            }
+        }
+    }
+}
